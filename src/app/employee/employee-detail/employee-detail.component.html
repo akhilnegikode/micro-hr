@@ -1,0 +1,66 @@
+<div>
+    <div class="page-header">
+        <h3>{{employee.firstName}} {{employee.lastName}} <small>{{employee.jobTitle}}</small></h3>
+    </div>
+    <div>
+        <form [formGroup]="employeeForm">
+            <div class="row form-group">
+                <label for="nationalIdNumber" class="col-sm-1 col-form-label">NationalIdNumber</label>
+                <div class="col-md-3">
+                    <input id="nationalIdNumber" formControlName="nationalIdNumber" class="form-control" type="text" readonly="true">
+                </div>
+                <label for="loginId" class="col-sm-1 col-form-label">LoginId</label>
+                <div class="col-md-3">
+                    <input id="loginId" class="form-control" type="text" formControlName="loginId"
+                        placeholder="e.g. adventure-works\loginName" readonly="true">
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="birthDate" class="col-sm-1 col-form-label">Birth Date</label>
+                <div class="col-md-3">
+                    <input id="birthDate" class="form-control" type="text" formControlName="birthDate"
+                        placeholder="e.g. 2003-01-07" readonly="true">
+                </div>
+                <label for="hireDate" class="col-sm-1 col-form-label">Hire Date</label>
+                <div class="col-md-3">
+                    <input id="hireDate" class="form-control" type="text" formControlName="hireDate"
+                        placeholder="e.g. 2003-01-07" readonly="true">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label for="vacationHours" class="col-sm-1 col-form-label">Vacation Hours</label>
+                <div class="col-md-3">
+                    <input id="vacationHours" class="form-control" type="text" formControlName="vacationHours"
+                        placeholder="e.g. 5" readonly="true">
+                </div>
+                <label for="sickLeaveHours" class="col-sm-1 col-form-label">Sick Leave Hours</label>
+                <div class="col-md-3">
+                    <input id="sickLeaveHours" class="form-control" type="text" formControlName="sickLeaveHours"
+                        placeholder="e.g. 5" readonly="true">
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="gender" class="col-sm-1 col-form-label">Gender</label>
+                <div class="col-md-3">
+                    <input id="gender" class="form-control" type="text" readonly="true" formControlName="gender">
+                </div>
+                <label for="maritalStatus" class="col-sm-1 col-form-label">Marital Status</label>
+                <div class="col-md-3">
+                    <input id="maritalStatus" class="form-control" type="text" readonly="true" formControlName="maritalStatus">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-3">
+                    <input class="form-check-input" type="checkbox" id="salariedFlag" readonly="true">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-secondary mb-2" (click)="onBack()">Back</button>
+    </div>
+</div>

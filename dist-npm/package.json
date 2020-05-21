@@ -1,0 +1,9 @@
+{
+  "name": "micro-hr",
+  "author":"test user",
+  "version": "1.0.5",
+  "license": "MIT",
+   "main": "bundles/micro-hr.umd.js",
+  "module": "index.js",
+  "typings": "index.d.ts"
+}

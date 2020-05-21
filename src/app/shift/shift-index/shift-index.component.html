@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-body">
+                <table class="table table-bordered table-hover" *ngIf="shifts && shifts.length">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Name</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let shift of shifts">
+                            <td>
+                                <a [routerLink]="['/shift', shift.id]" class="btn btn-info btn-sm">View</a>
+                                <a [routerLink]="['/shift/edit', shift.id]" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-edit"></i>Edit</a>
+                            </td>
+                            <td>{{ shift.name }}</td>
+                            <td>{{ shift.startTime }}</td>
+                            <td>{{ shift.endTime }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row top-buffer">
+    <div class="col-md-12">
+        <a [routerLink]="['/shift/create']" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>Add Shift</a>
+    </div>
+</div>
